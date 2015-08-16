@@ -31,11 +31,11 @@ app.controller('HomeCtrl', function($scope, $timeout, $ionicPopup){
 	$scope.tickInterval = 1000;
 	$scope.actions = [
 		{
-			title : 'Check In',
+			title : '<i class="icon ion-help-circled positive"></i> Check In',
 			description : 'Are you sure you want to check in?',			
 		},
 		{
-			title : 'Check Out',
+			title : '<i class="icon ion-help-circled positive"></i> Check Out',
 			description : 'Are you sure you want to check out?',			
 		}
 	];
@@ -48,7 +48,7 @@ app.controller('HomeCtrl', function($scope, $timeout, $ionicPopup){
 					description : 'An error occured.'
 				},
 				{
-					title : 'Successful',
+					title : '<i class="icon ion-checkmark-circled positive"></i> Successful',
 					description : 'Successfully recorded!'
 				}					
 			];
