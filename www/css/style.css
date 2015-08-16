@@ -1,0 +1,7 @@
+/* Empty. Add your own CSS if you like */
+.center {
+	text-align: center;
+}
+ion-side-menu ion-content ion-list ion-item i {
+	color: #EF473A;
+}

@@ -1,0 +1,33 @@
+<ion-view view-title="Check-IO">
+  <ion-content>
+    <ion-list>
+    	<div class="item item-divider item-icon-left">
+    		<i class="icon ion-calendar"></i>
+           	Current Date
+        </div>
+        <ion-item>
+        	<h1 class="center">{{currentDate  | date:'yyyy-MM-dd'}}</h1>
+        </ion-item>
+        <div class="item item-divider item-icon-left">
+        	<i class="icon ion-clock"></i>
+           	Current Time
+        </div>
+        <ion-item>
+        	<h1 class="center">{{currentTime | date:'hh:mm:ss a'}}</h1>
+        </ion-item>
+        <div class="item item-divider">
+           Actions
+        </div>
+        <ion-item>
+        	<div class="button-bar">
+        		<button class="button button-balanced icon-left ion-android-checkmark-circle">
+        			Check In
+    			</button>
+    			<button class="button button-assertive icon-right ion-log-out">
+    			 	Check Out
+    			</button>
+        	</div>    		
+        </ion-item>        
+    </ion-list>    
+  </ion-content>
+</ion-view>
