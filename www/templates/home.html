@@ -6,7 +6,7 @@
            	Current Date
         </div>
         <ion-item>
-        	<h1 class="center">{{currentDate  | date:'yyyy-MM-dd'}}</h1>
+        	<h1 class="center">{{currentDate  | date:'MM-dd-yyyy'}}</h1>
         </ion-item>
         <div class="item item-divider item-icon-left">
         	<i class="icon ion-clock"></i>
@@ -20,10 +20,10 @@
         </div>
         <ion-item>
         	<div class="button-bar">
-        		<button class="button button-balanced icon-left ion-android-checkmark-circle">
+        		<button class="button button-balanced icon-left ion-android-checkmark-circle" ng-click="showConfirm(0)">
         			Check In
     			</button>
-    			<button class="button button-assertive icon-right ion-log-out">
+    			<button class="button button-assertive icon-right ion-log-out" ng-click="showConfirm(1)">
     			 	Check Out
     			</button>
         	</div>    		
