@@ -32,19 +32,28 @@ app.controller('HomeCtrl', function($scope, $timeout, $ionicPopup){
 	$scope.actions = [
 		{
 			title : 'Check In',
-			description : 'Are you sure you want to check in?',
-			action : function(data) {
-				$scope.showAlert(data)
-			}
+			description : 'Are you sure you want to check in?',			
 		},
 		{
 			title : 'Check Out',
-			description : 'Are you sure you want to check out?',
-			action : function(data) {
-				$scope.showAlert(data);
-			}
+			description : 'Are you sure you want to check out?',			
 		}
 	];
+
+	//function to get action response in confirmation action
+	$scope.getActionResponse = function(id) {
+		var response = [
+				{
+					title : 'Unsuccessful',
+					description : 'An error occured.'
+				},
+				{
+					title : 'Successful',
+					description : 'Successfully recorded!'
+				}					
+			];
+		return response[id];
+	}
 
 	//function to call in every interval
     var tick = function() {
@@ -72,7 +81,7 @@ app.controller('HomeCtrl', function($scope, $timeout, $ionicPopup){
        });
        confirmPopup.then(function(res) {
          if(res) {
-           $scope.actions[id].action($scope.actions[id]);
+           $scope.showAlert($scope.getActionResponse(1));
          }
        });
      };
